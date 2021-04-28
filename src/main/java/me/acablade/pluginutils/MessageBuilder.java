@@ -87,7 +87,10 @@ public class MessageBuilder {
      */
     public MessageBuilder setHoverEvent(HoverEvent.Action action, ItemStack itemStack) {
         if(this.message==null) return this;
-        this.message.setHoverEvent(new HoverEvent(action,new Text(convertItemStackToJson(itemStack))));
+        BaseComponent[] hoverEventComponents = new BaseComponent[]{
+                new TextComponent(convertItemStackToJson(itemStack)) // The only element of the hover events basecomponents is the item json
+        };
+        this.message.setHoverEvent(new HoverEvent(action,hoverEventComponents));
         return this;
     }
 
