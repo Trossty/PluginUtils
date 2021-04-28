@@ -3,6 +3,7 @@ package me.acablade.pluginutils;
 import net.md_5.bungee.api.chat.*;
 import net.md_5.bungee.api.chat.hover.content.Text;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.lang.reflect.Method;
@@ -134,6 +135,17 @@ public class MessageBuilder {
         if(this.message==null) return this;
         this.message.setClickEvent(new ClickEvent(action, format(text)));
         return this;
+    }
+
+    /**
+     * Sends player the message
+     * @param player Player to send message
+     * @return is the operation successfully completed
+     */
+    public boolean send(Player player){
+        if(this.message==null) return false;
+        player.spigot().sendMessage(this.message);
+        return true;
     }
 
     public TextComponent toTextComponent(){

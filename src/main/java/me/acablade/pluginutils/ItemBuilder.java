@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -17,6 +18,7 @@ public class ItemBuilder {
 
     private ItemStack itemStack;
 
+
     public ItemBuilder(Material material){
         this.itemStack = new ItemStack(material);
     }
@@ -25,6 +27,11 @@ public class ItemBuilder {
         this.itemStack = new ItemStack(material, amount);
     }
 
+    /**
+     * Set display name
+     * @param name the name you want to give to itemstack
+     * @return ItemBuilder class
+     */
     public ItemBuilder withDisplayName(String name){
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.setDisplayName(Colorize.format(name));
@@ -72,6 +79,12 @@ public class ItemBuilder {
         itemMeta.addAttributeModifier(attr,attributeModifier);
         itemStack.setItemMeta(itemMeta);
         return this;
+    }
+
+    public boolean give(Player player){
+        if(this.itemStack==null) return false;
+        player.getInventory().addItem(this.itemStack);
+        return true;
     }
 
 
