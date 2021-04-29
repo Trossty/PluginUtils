@@ -76,7 +76,7 @@ public class ItemBuilder {
 
     public ItemBuilder withAttribute(Attribute attr, AttributeModifier attributeModifier){
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.getAttributeModifiers(attr).add(attributeModifier);
+        itemMeta.addAttributeModifier(attr, attributeModifier);
         itemStack.setItemMeta(itemMeta);
         return this;
     }

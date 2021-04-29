@@ -35,4 +35,9 @@ public class ConfigurationFile {
         yamlConfiguration.save(file);
     }
 
+    @SneakyThrows
+    public void reload(){
+        this.yamlConfiguration.load(this.file);
+    }
+
 }
