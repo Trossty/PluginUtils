@@ -37,7 +37,7 @@ public class ConfigurationFile {
 
     @SneakyThrows
     public void reload(){
-        this.yamlConfiguration.load(this.file);
+        yamlConfiguration.load(file);
     }
 
 }
