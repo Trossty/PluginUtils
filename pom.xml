@@ -6,7 +6,7 @@
 
     <groupId>me.acablade</groupId>
     <artifactId>PluginUtils</artifactId>
-    <version>0.0.5-ALPHA</version>
+    <version>0.0.6-ALPHA</version>
     <packaging>jar</packaging>
 
     <name>PluginUtils</name>
@@ -73,24 +73,6 @@
             <artifactId>spigot-api</artifactId>
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <scope>provided</scope>
-            <version>1.16.22</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.JordanOsterberg</groupId>
-            <artifactId>MCGUIAPI</artifactId>
-            <version>1.0.2</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.github.JordanOsterberg</groupId>
-            <artifactId>JScoreboards</artifactId>
-            <version>1.0.1-RELEASE</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

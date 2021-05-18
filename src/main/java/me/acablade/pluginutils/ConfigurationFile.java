@@ -1,10 +1,11 @@
 package me.acablade.pluginutils;
 
-import lombok.SneakyThrows;
+import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
 import java.io.File;
+import java.io.IOException;
 
 public class ConfigurationFile {
 
@@ -16,28 +17,45 @@ public class ConfigurationFile {
      * @param plugin The plugin which should own this file.
      * @param name The name (without extension) of the file
      */
-    @SneakyThrows
     public ConfigurationFile(Plugin plugin, String name) {
         this.file = new File(plugin.getDataFolder(), name + ".yml");
         this.yamlConfiguration = new YamlConfiguration();
         if (!this.file.exists()) {
-            this.file.createNewFile();
+            try {
+                this.file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        this.yamlConfiguration.load(this.file);
+        try {
+            this.yamlConfiguration.load(this.file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
     }
 
     public YamlConfiguration getConfiguration() {
         return yamlConfiguration;
     }
 
-    @SneakyThrows
     public void save() {
-        yamlConfiguration.save(file);
+        try {
+            yamlConfiguration.save(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    @SneakyThrows
     public void reload(){
-        yamlConfiguration.load(file);
+        try {
+            yamlConfiguration.load(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
     }
 
 }
