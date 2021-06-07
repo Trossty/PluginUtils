@@ -87,6 +87,35 @@ public class ItemBuilder {
         return true;
     }
 
+    public boolean setHelmet(Player player){
+        if(this.itemStack==null) return false;
+        player.getInventory().setHelmet(this.itemStack);
+        return true;
+    }
+
+    public boolean setChestplate(Player player){
+        if(this.itemStack==null) return false;
+        player.getInventory().setChestplate(this.itemStack);
+        return true;
+    }
+
+    public boolean setLeggings(Player player){
+        if(this.itemStack==null) return false;
+        player.getInventory().setLeggings(this.itemStack);
+        return true;
+    }
+
+    public boolean setBoots(Player player){
+        if(this.itemStack==null) return false;
+        player.getInventory().setBoots(this.itemStack);
+        return true;
+    }
+
+    public boolean setOffHand(Player player){
+        if(this.itemStack==null) return false;
+        player.getInventory().setItemInOffHand(this.itemStack);
+        return true;
+    }
 
     public ItemStack getItemStack(){
         return this.itemStack;
