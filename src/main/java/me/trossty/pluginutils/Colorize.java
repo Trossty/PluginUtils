@@ -1,6 +1,6 @@
-package me.acablade.pluginutils;
+package me.trossty.pluginutils;
 
-import org.bukkit.ChatColor;
+import net.md_5.bungee.api.ChatColor;
 
 public class Colorize {
 

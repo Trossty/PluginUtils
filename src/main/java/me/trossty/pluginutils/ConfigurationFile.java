@@ -1,4 +1,4 @@
-package me.acablade.pluginutils;
+package me.trossty.pluginutils;
 
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;

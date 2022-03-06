@@ -1,4 +1,4 @@
-package me.acablade.pluginutils;
+package me.trossty.pluginutils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

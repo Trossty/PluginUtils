@@ -1,4 +1,4 @@
-package me.acablade.pluginutils;
+package me.trossty.pluginutils;
 
 import net.md_5.bungee.api.chat.*;
 import net.md_5.bungee.api.chat.hover.content.Text;
@@ -9,7 +9,7 @@ import org.bukkit.inventory.ItemStack;
 import java.lang.reflect.Method;
 import java.util.logging.Level;
 
-import static me.acablade.pluginutils.Colorize.format;
+import static me.trossty.pluginutils.Colorize.format;
 
 public class MessageBuilder {
 

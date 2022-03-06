@@ -1,4 +1,4 @@
 # PluginUtils
-General plugin utilities
+General Plugin Utils For Fast Coding
 
-[![](https://jitpack.io/v/Acablade/PluginUtils.svg)](https://jitpack.io/#Acablade/PluginUtils)
+[![]()]()
